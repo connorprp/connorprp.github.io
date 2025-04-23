@@ -1,22 +1,72 @@
-/* General Reset */
-body, h1, h2, h3, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    scroll-behavior: smooth;
 }
 
 /* Body Styling */
 body {
+    margin: 0;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: white;
     background-color: #f4f4f9;
-    padding: 20px;
 }
 
+nav {
+    text-align: right;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+}
+
+#nav-link {
+    color: white;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+section {
+    border-top: 3px solid #0078d7;
+    padding: 5%;
+}
+
+#hero {
+    background-color: #ffffff;
+    color: black;
+}
+
+#about {
+    background: linear-gradient(to right, #262655, #00bfff);
+    color: white;
+}
+
+#contact {
+    background-color: white;
+    color: black;
+}
+
+#contact {
+    background-color: #ffffff;
+    color: black;
+}
+
+#resume {
+    background: linear-gradient(to right, #262655, #00bfff);
+    color: white;
+}
+
+#projects {
+    background-color: #ffffff;
+    color: black;
+}
+
+
+
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 175%;
     color: #0078d7; 
 }
 
@@ -26,20 +76,11 @@ p {
 
 #links {
     color: red;
-    padding-left: 20px;
+    padding-right: 20px;
     text-decoration: underline;
 }
 #links:hover {
     color: blueviolet
-}
-/* Main Content */
-body {
-    max-width: 900px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Section Titles */
@@ -55,5 +96,3 @@ h2 {
 p {
     margin-bottom: 15px;
 }
-
-/* Lists */
