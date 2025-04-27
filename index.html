@@ -9,19 +9,42 @@
 </head>
 
 <nav id="navbar">
-    <a id="nav-link" href="#hero">Home</a>
-    <a id="nav-link" href="#about">About</a>
-    <a id="nav-link" href="#contact">Contact</a>
-    <a id="nav-link" href="#resume">Resume</a>
-    <a id="nav-link" href="#projects">Projects</a>
-
+    <a class="nav-link" href="#hero">Home</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#contact" id="contact-nav-link">Contact</a>
+    <a class="nav-link" href="#resume">Resume</a>
+    <a class="nav-link" href="#projects">Projects</a>
 </nav>
+
+<div id="contact-bar">
+    <p id="contact">Phone: 434-806-3435</p>
+    <p id="contact">Email: connorpoindexter12@gmail.com</p>
+    <div id="socials">
+        <a href="https://github.com/connorprp/"><img id="github" src="./assets/github-mark.png" alt="GitHub Logo"></a>
+        <a href="https://linkedin.com/in/connor-poindexter-080456157"><img id="linkedin" src="./assets/linkedin.png" alt="LinkedIn Logo"></a>
+    </div>
+</div>
 
 <body>
     <section id="hero">
-        <h1>Connor Poindexter</h1>
-        <p>Welcome to my personal webpage!</p>
-        <p>Here you can find information about me, my projects, and how to contact me.</p>
+        <h1 id="myName"></h1>
+        <button class="continueBtn" id="continue1">Continue...</button>
+        <p id="description"></p>
+        <button class="continueBtn" id="continue2" style="display: none">Continue...</button>
+        <p id="languages" style="display: none">Programming Languages:</p>
+        <p id="skills"></p>
+        <button class="continueBtn" id="continue3" style="display: none">Continue...</button>
+        <p id="projects" style="display: none">Projects:</p>
+        <div id="projectsContainer" style="display: none">
+            <a class="projectBtn" id="project1" href="#projectSection1">Project 1</a>
+            <a class="projectBtn" id="project2">Project 2</a>
+            <a class="projectBtn" id="project3">Project 3</a>
+        </div>
+    </section>
+
+    <section id="projectSection1">
+        <h2>Project 1</h2>
+        <p>This is a description of Project 1.</p>
     </section>
 
     <section id="about">
@@ -29,7 +52,7 @@
         <p>I am a software developer with a passion for creating innovative solutions.</p>
     </section>
 
-    <section id="contact">
+    <section>
         <h2>Contact</h2>
         <p style="padding-left: 20px">Email: connorpoindexter12@gmail.com</p>
         <p style="padding-left: 20px">Cell: 434-806-3435</p>
@@ -54,6 +77,9 @@
             A Github
             repository showcasing an app that toggles desktop icons with a keyboard shortcut on Windows.</p>
     </section>
+    <div id="footer">
+        <p>© 2023 Connor Poindexter</p>
+    </div>
 </body>
-
+<script src="script.js"></script>
 </html>

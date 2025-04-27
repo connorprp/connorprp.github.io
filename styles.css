@@ -2,40 +2,115 @@
     scroll-behavior: smooth;
 }
 
-/* Body Styling */
+@font-face {
+    font-family: SourceCodePro;
+    src: url('./assets/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf') format('truetype');
+}
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: white;
-    background-color: #f4f4f9;
+    font-family: SourceCodePro;
+}
+
+#contact-bar {
+    display: inline-flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    margin-top: 58px;
+}
+
+#contact {
+    margin-left: 5%;
+    width: 100%;
+    font-family: Verdana;
+    font-size: 20px;
+}
+
+#socials {
+    width: 1000px;
+    text-align: right;
+    margin-right: 10%;
+}
+
+#github {
+    margin-top: 5px;
+    width: 50px;
+}
+
+#linkedin {
+    width: 50px;
+    margin-bottom: 2px;
 }
 
 nav {
     text-align: right;
     width: 100%;
-    background-color: #333;
+    background-color: #2a2828;
     padding: 10px;
     position: fixed;
     right: 0;
 }
 
-#nav-link {
-    color: white;
+.nav-link {
+    color: rgb(16, 228, 40);
     padding: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: SourceCodePro;
     text-decoration: none;
     font-size: 150%;
+    margin-right: 20px;
 }
 
 section {
     border-top: 3px solid #0078d7;
     padding: 5%;
+    height: 100vh;
 }
 
 #hero {
-    background-color: #ffffff;
-    color: black;
+    background-color: #2a2828;
+    color: rgb(16, 228, 40);
+}
+
+.continueBtn {
+    background-color: #2a2828;
+    color: rgb(16, 228, 40);
+    font-family: SourceCodePro;
+    font-size: 20px;
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+
+.continueBtn:hover {
+    background-color: #585656;
+    border-radius: 4px;
+    color: rgb(16, 228, 40);
+}
+
+#description {
+    margin-left: 10%;
+}
+
+#skills {
+    margin-left: 10%;
+}
+.projectBtn {
+    background-color: #2a2828;
+    color: rgb(16, 228, 40);
+    font-family: SourceCodePro;
+    font-size: 20px;
+    box-shadow: none;
+    background: none;
+    text-align: center;
+    border: 1px solid rgb(16, 228, 40);
+    padding: 10px 20px;
+}
+
+.projectBtn:hover {
+    background-color: #585656;
+    color: rgb(16, 228, 40);
 }
 
 #about {
@@ -43,35 +118,14 @@ section {
     color: white;
 }
 
-#contact {
-    background-color: white;
-    color: black;
-}
-
-#contact {
-    background-color: #ffffff;
-    color: black;
-}
-
 #resume {
     background: linear-gradient(to right, #262655, #00bfff);
     color: white;
 }
 
-#projects {
-    background-color: #ffffff;
-    color: black;
-}
-
-
-
 h1 {
-    font-size: 175%;
+    font-size: 300%;
     color: #0078d7; 
-}
-
-p {
-    font-size: 1.2rem;
 }
 
 #links {
@@ -90,9 +144,4 @@ h2 {
     color: #0078d7;
     border-bottom: 2px solid #0078d7;
     padding-bottom: 5px;
-}
-
-/* Paragraphs */
-p {
-    margin-bottom: 15px;
 }
