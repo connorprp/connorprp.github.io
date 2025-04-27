@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
             myName.innerHTML += welcomeMsg[i];
         }, 75 * i); 
     }
-});  
+});
 
 continueBtn1.addEventListener("click", () => {
     continueBtn1.style.display = "none";
