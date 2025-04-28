@@ -2,6 +2,81 @@
     scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #contact-bar {
+        flex-direction: column;
+        margin-top: 0;
+        padding: 10px;
+    }
+
+    #contact {
+        margin-left: 0;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #socials {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    nav {
+        text-align: center;
+        padding: 5px;
+        display: wrap;
+    }
+
+    .nav-link {
+        font-size: 80%;
+        margin: 0;
+    }
+    
+    #myName {
+        font-size: 1.5rem;
+        margin-top: 100px;
+    }
+    section {
+        padding: 10%;
+        height: auto;
+    }
+
+    .continueBtn {
+        font-size: 1.5rem;
+    }
+    #projects-container {
+        width: 100%;
+    }
+
+    .projectBtn {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .project-1-images {
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #description, #skills, #projects, #languages {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+}
+
 @font-face {
     font-family: SourceCodePro;
     src: url('./assets/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf') format('truetype');
@@ -51,6 +126,7 @@ nav {
     padding: 10px;
     position: fixed;
     right: 0;
+    z-index: 1;
 }
 
 .nav-link {
@@ -63,7 +139,9 @@ nav {
 }
 
 section {
-    border-top: 3px solid #0078d7;
+    background-color: #2a2828;
+    color: rgb(16, 228, 40);
+    border-top: 3px solid #2d2e30;
     padding: 5%;
     height: 100vh;
 }
@@ -72,7 +150,6 @@ section {
     background-color: #2a2828;
     color: rgb(16, 228, 40);
 }
-
 .continueBtn {
     background-color: #2a2828;
     color: rgb(16, 228, 40);
@@ -91,14 +168,25 @@ section {
 
 #description {
     margin-left: 10%;
+    font-size: 1.5rem;
 }
 
 #skills {
     margin-left: 10%;
+    font-size: 1.5rem;
+}
+#projects {
+    margin-left: 10%;
+    font-size: 1.5rem;
+}
+
+#projects-container {
+    width: 15%;
 }
 .projectBtn {
     background-color: #2a2828;
     color: rgb(16, 228, 40);
+    text-decoration: none;
     font-family: SourceCodePro;
     font-size: 20px;
     box-shadow: none;
@@ -106,6 +194,7 @@ section {
     text-align: center;
     border: 1px solid rgb(16, 228, 40);
     padding: 10px 20px;
+    margin-left: 10%;
 }
 
 .projectBtn:hover {
@@ -113,9 +202,24 @@ section {
     color: rgb(16, 228, 40);
 }
 
+#project-1-images-container {
+    display:inline-block;
+}
+
+.project-1-images {
+    width: 80vh;
+    padding-top: 8%;
+}
+
+.project-1-images:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in;
+}
+
 #about {
     background: linear-gradient(to right, #262655, #00bfff);
     color: white;
+    font-size: 1.5rem;
 }
 
 #resume {

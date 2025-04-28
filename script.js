@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 continueBtn1.addEventListener("click", () => {
     continueBtn1.style.display = "none";
-    const descriptionMsg = `I'm a software engineer with a passion for creating innovative solutions. I love coding, problem-solving, and learning new technologies.`;
+    const descriptionMsg = `>>I'm a software engineer with a passion for creating innovative solutions. I love coding, problem-solving, and learning new technologies.`;
     for (let i = 0; i < descriptionMsg.length; i++) {
         setTimeout(() => {
             description.innerHTML += descriptionMsg[i];
@@ -50,7 +50,7 @@ continueBtn1.addEventListener("click", () => {
 continueBtn2.addEventListener("click", () => {
     continueBtn2.style.display = "none";
     languages.style.display = "inline-block";
-    const skillsMsg = "JavaScript - CSS - HTML - Java - C++ - Python";
+    const skillsMsg = ">>Programming Languages:     JavaScript - CSS - HTML - Java - C++ - Python";
     for (let i = 0; i < skillsMsg.length; i++) {
         setTimeout(() => {
             skills.innerHTML += skillsMsg[i];
@@ -65,6 +65,3 @@ continueBtn3.addEventListener("click", () => {
     projectContainer.style.display = "block";
 }); 
  
-projectBtn1.onclick = () => {
-    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-}
