@@ -15,6 +15,8 @@ const projectContainer = document.getElementById("projectsContainer");
 const projectBtn1 = document.getElementById("projectBtn1");
 const projectBtn2 = document.getElementById("projectBtn2");
 const projectBtn3 = document.getElementById("projectBtn3");
+const sites = document.getElementById("sites");
+const sitesContainer = document.getElementById("sitesContainer");
 
 let clicked = false;
 contactBar.style.display = "none";
@@ -32,39 +34,39 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < welcomeMsg.length; i++) {
         setTimeout(() => {
             myName.innerHTML += welcomeMsg[i];
-        }, 75 * i); 
+        }, 75 * i);
     }
-});  
+});
 
-continueBtn1.addEventListener("click", () => {
-    continueBtn1.style.display = "none";
+setTimeout(() => {
     const descriptionMsg = `I'm a software engineer with a passion for creating innovative solutions. I love coding, problem-solving, and learning new technologies.`;
     for (let i = 0; i < descriptionMsg.length; i++) {
         setTimeout(() => {
             description.innerHTML += descriptionMsg[i];
-        }, 10 * i); 
+        }, 10 * i);
     }
-    continueBtn2.style.display = "inline-block";
-});  
+}, 1000);
 
-continueBtn2.addEventListener("click", () => {
-    continueBtn2.style.display = "none";
-    languages.style.display = "inline-block";
+setTimeout(() => {
+    skills.style.display = "inline-block";
     const skillsMsg = "JavaScript - CSS - HTML - Java - C++ - Python";
     for (let i = 0; i < skillsMsg.length; i++) {
         setTimeout(() => {
             skills.innerHTML += skillsMsg[i];
-        }, 10 * i); 
+        }, 10 * i);
     }
-    continueBtn3.style.display = "inline-block";
-});  
+}, 2500);
 
-continueBtn3.addEventListener("click", () => {
-    continueBtn3.style.display = "none";
-    projects.style.display = "inline-block";
+setTimeout(() => {
+    projects.style.display = "block";
     projectContainer.style.display = "block";
-}); 
- 
+}, 3000);
+
+setTimeout(() => {
+    sites.style.display = "block";
+    sitesContainer.style.display = "block";
+}, 3500);
+
 projectBtn1.onclick = () => {
     document.getElementById("about").scrollIntoView({ behavior: "smooth" });
 }

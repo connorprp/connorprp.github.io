@@ -6,10 +6,13 @@
     font-family: SourceCodePro;
     src: url('./assets/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf') format('truetype');
 }
+
 body {
     margin: 0;
     line-height: 1.6;
     font-family: SourceCodePro;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 #contact-bar {
@@ -19,6 +22,7 @@ body {
     position: fixed;
     width: 100%;
     margin-top: 58px;
+    flex-wrap: wrap;
 }
 
 #contact {
@@ -29,19 +33,14 @@ body {
 }
 
 #socials {
-    width: 1000px;
+    width: auto;
     text-align: right;
     margin-right: 10%;
 }
 
-#github {
-    margin-top: 5px;
-    width: 50px;
-}
-
-#linkedin {
-    width: 50px;
-    margin-bottom: 2px;
+#github, #linkedin {
+    margin: 5px;
+    width: 40px;
 }
 
 nav {
@@ -58,54 +57,36 @@ nav {
     padding: 10px;
     font-family: SourceCodePro;
     text-decoration: none;
-    font-size: 150%;
-    margin-right: 20px;
+    font-size: 120%;
+    margin-right: 10px;
 }
 
 section {
     border-top: 3px solid #0078d7;
     padding: 5%;
-    height: 100vh;
+    height: auto;
 }
 
 #hero {
     background-color: #2a2828;
     color: rgb(16, 228, 40);
+    height: 100vh;
 }
 
-.continueBtn {
-    background-color: #2a2828;
-    color: rgb(16, 228, 40);
-    font-family: SourceCodePro;
-    font-size: 20px;
-    box-shadow: none;
-    border: none;
-    background: none;
+#description, #skills {
+    margin-left: 5%;
 }
 
-.continueBtn:hover {
-    background-color: #585656;
-    border-radius: 4px;
-    color: rgb(16, 228, 40);
-}
-
-#description {
-    margin-left: 10%;
-}
-
-#skills {
-    margin-left: 10%;
-}
 .projectBtn {
     background-color: #2a2828;
     color: rgb(16, 228, 40);
     font-family: SourceCodePro;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: none;
     background: none;
     text-align: center;
     border: 1px solid rgb(16, 228, 40);
-    padding: 10px 20px;
+    padding: 8px 16px;
 }
 
 .projectBtn:hover {
@@ -113,18 +94,20 @@ section {
     color: rgb(16, 228, 40);
 }
 
-#about {
-    background: linear-gradient(to right, #262655, #00bfff);
-    color: white;
+#projectSection1 {
+    background-color: #2a2828;
+    color: rgb(16, 228, 40);
+    height: 100vh;
+    font-family: SourceCodePro;
 }
 
-#resume {
-    background: linear-gradient(to right, #262655, #00bfff);
+#about, #resume {
+    
     color: white;
 }
 
 h1 {
-    font-size: 300%;
+    font-size: 2rem;
     color: #0078d7; 
 }
 
@@ -133,15 +116,81 @@ h1 {
     padding-right: 20px;
     text-decoration: underline;
 }
+
 #links:hover {
-    color: blueviolet
+    color: blueviolet;
 }
 
 /* Section Titles */
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #0078d7;
+    color: rgb(16, 228, 40);
     border-bottom: 2px solid #0078d7;
     padding-bottom: 5px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #hero {
+        height: 100vh;
+        text-align: left;
+    }
+    #contact-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #socials {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    nav {
+        text-align: right;
+        white-space: nowrap; /* Ensure buttons stay on the same line */
+        padding: 0 10px; /* Add padding to ensure content stays within the viewport */
+    }
+
+    .nav-link {
+        font-size: 80%;
+        display: inline-block; /* Ensure buttons stay inline */
+    }
+
+    section {
+        padding: 10%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .projectBtn {
+        font-size: 16px;
+        padding: 6px 12px;
+        display: block;
+    }
+
+    #projectsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+    }
+
+    #sitesContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+    }
 }
