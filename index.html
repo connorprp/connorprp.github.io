@@ -33,35 +33,41 @@
         <p id="skills"></p>
         <p id="projects-label" style="display: none">Projects:</p>
         <div id="projectsContainer" style="display: none">
-            <a class="projectBtn" id="project1" href="#projectSection1">RankedEuchre</a>
-            <a class="projectBtn" id="project2" href="#projectSection2">Flyweight Systems</a>
-            <a class="projectBtn" id="project3" href="#projectSection3">Tournament Payouts</a>
+            <a class="projectBtn" id="project1" href="#projectSection1">GBN Platform</a>
+            <a class="projectBtn" id="project2" href="#projectSection2">Earshot</a>
+            <a class="projectBtn" id="project3" href="#projectSection3">Bird Targets</a>
         </div>
         <p id="sites" style="display: none">Live sites:</p>
         <div id="sitesContainer" style="display: none">
-            <a class="projectBtn" id="site1" href="https://rankedeuchre.com" target="_blank">rankedeuchre.com</a>
-            <a class="projectBtn" id="site2" href="https://flyweight.rustycloud.dev" target="_blank">flyweight.rustycloud.dev</a>
-            <a class="projectBtn" id="site3" href="https://golfbusinessnetwork.com" target="_blank">golfbusinessnetwork.com</a>
+            <a class="projectBtn" id="site1" href="https://golfbusinessnetwork.com" target="_blank">golfbusinessnetwork.com</a>
+            <a class="projectBtn" id="site2" href="https://earshot.rustycloud.dev" target="_blank">earshot.rustycloud.dev</a>
+            <a class="projectBtn" id="site3" href="https://bird-targets.rustycloud.dev" target="_blank">bird-targets.rustycloud.dev</a>
         </div>
     </section>
 
     <section id="projectSection1">
-        <h2>RankedEuchre</h2>
-        <p>Free, browser-first ranked online euchre: no ads, no sign-up required to play. A monorepo with a pure
-            rules engine (unit tested), an Express 5 + Socket.IO backend for real-time multiplayer, and a Vue 3 frontend.
-            Live at <a id="links" href="https://rankedeuchre.com" target="_blank">rankedeuchre.com</a>.</p>
+        <h2>GBN Platform</h2>
+        <p>At Golf Business Network I own the platform end to end: a suite of custom WordPress plugins (job
+            board, events, member directory, mobile API), a hosted platform of nine MCP servers that let the team
+            work through Claude, an Expo / React Native app for iOS and Android, and a monitoring service that
+            watches all of it. The code is private; the case studies on my
+            <a id="links" href="https://github.com/connorprp" target="_blank">GitHub profile</a> walk through
+            the design and the numbers.</p>
     </section>
     <section id="projectSection2">
-        <h2>Flyweight Systems</h2>
-        <p>Full-stack MEVN app (MongoDB, Express, Vue 3, Node) deployed as a single service: Express serves the built
-            Vue SPA and the JWT-authenticated API. Self-hosted on my own server behind Coolify.
-            <a id="links" href="https://github.com/connorprp/flyweight-systems" target="_blank">Source</a></p>
+        <h2>Earshot</h2>
+        <p>An ambient conversation dashboard. A native capture agent listens to mic and system audio, runs
+            Whisper locally, and streams transcript lines to a Node hub, where the Claude Agent SDK distills the
+            conversation into live concept bubbles with suggested actions (calendar, email, spreadsheet, notes).
+            Multi-tenant with Google sign-in, Windows and Mac installers, self-updating agents.
+            <a id="links" href="https://github.com/connorprp/earshot" target="_blank">Source</a></p>
     </section>
     <section id="projectSection3">
-        <h2>Tournament Payouts</h2>
-        <p>A Chrome extension that calculates cash payouts for golf tournaments, allocating each place's percentage to
-            the nearest even dollar and showing the remainder.
-            <a id="links" href="https://github.com/connorprp/tournament-payouts-extension" target="_blank">Source</a></p>
+        <h2>Bird Targets</h2>
+        <p>Answers "which life birds are being seen near me right now, and where?" Pulls recent observations
+            from the eBird API, subtracts your life list, and maps the nearest sightings with checklist links and
+            directions. Vue 3 front end, Express back end, runs in Docker on my own server.
+            <a id="links" href="https://github.com/connorprp/bird-targets" target="_blank">Source</a></p>
     </section>
     <section id="about">
         <h2>About Me</h2>
@@ -86,14 +92,12 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <p><a id="links" href="https://rankedeuchre.com" target="_blank">RankedEuchre</a> -
-            Ranked online euchre with real-time multiplayer. Node, Socket.IO, Vue 3.</p>
-        <p><a id="links" href="https://github.com/connorprp/flyweight-systems" target="_blank">Flyweight Systems</a> -
-            Single-service MEVN application with JWT auth, self-hosted.</p>
-        <p><a id="links" href="https://github.com/connorprp/tournament-payouts-extension" target="_blank">Tournament
-                Payouts</a> - Chrome extension for golf tournament payout math.</p>
-        <p><a id="links" href="https://github.com/connorprp/Toggle_Desktop_Icons" target="_blank">Toggle Desktop
-                Icons</a> - Windows keyboard shortcut to show or hide desktop icons.</p>
+        <p><a id="links" href="https://github.com/connorprp" target="_blank">GBN Platform case studies</a> -
+            WordPress plugin suite, MCP server platform, mobile app, monitoring. Private code, public write-ups.</p>
+        <p><a id="links" href="https://github.com/connorprp/earshot" target="_blank">Earshot</a> -
+            Local Whisper capture plus Claude Agent SDK distillation into a live dashboard. Python, Node, Vue 3.</p>
+        <p><a id="links" href="https://github.com/connorprp/bird-targets" target="_blank">Bird Targets</a> -
+            Life-bird targets dashboard on the eBird API. Vue 3, Express, Docker.</p>
     </section>
     <div id="footer">
         <p>© 2026 Connor Poindexter</p>
