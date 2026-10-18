@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connor Poindexter — software engineer and Head of Digital Development at Golf Business Network. WordPress plugins, MCP servers, mobile apps, and self-hosted infrastructure.">
     <link rel="stylesheet" href="styles.css">
     <title>Connor Poindexter</title>
 </head>
@@ -13,11 +14,10 @@
     <a class="nav-link" href="#about">About</a>
     <a class="nav-link" href="#contact" id="contact-nav-link">Contact</a>
     <a class="nav-link" href="#resume">Resume</a>
-    <a class="nav-link" href="#projectSection1">Projects</a>
+    <a class="nav-link" href="#projects">Projects</a>
 </nav>
 
 <div id="contact-bar">
-    <p id="contact">Phone: 434-806-3435</p>
     <p id="contact">Email: connorpoindexter12@gmail.com</p>
     <div id="socials">
         <a href="https://github.com/connorprp/"><img id="github" src="./assets/github-mark.png" alt="GitHub Logo"></a>
@@ -31,70 +31,73 @@
         <h1 id="myName"></h1>
         <p id="description"></p>
         <p id="skills"></p>
-        <p id="projects" style="display: none">Projects:</p>
+        <p id="projects-label" style="display: none">Projects:</p>
         <div id="projectsContainer" style="display: none">
-            <a class="projectBtn" id="project1" href="#projectSection1">Web Dev Portfolio</a>
-            <a class="projectBtn" id="project2" href=#projectSection2>Toggle Desktop Icons</a>
-            <a class="projectBtn" id="project3" href=#projectSection3>Tournament Payouts Web App</a>
+            <a class="projectBtn" id="project1" href="#projectSection1">RankedEuchre</a>
+            <a class="projectBtn" id="project2" href="#projectSection2">Flyweight Systems</a>
+            <a class="projectBtn" id="project3" href="#projectSection3">Tournament Payouts</a>
         </div>
-        <p id="sites" style="display: none">Sites:</p>
+        <p id="sites" style="display: none">Live sites:</p>
         <div id="sitesContainer" style="display: none">
-            <a class="projectBtn" id="site1">Site 1</a>
-            <a class="projectBtn" id="site2">Site 2</a>
-            <a class="projectBtn" id="site3">Site 3</a>
+            <a class="projectBtn" id="site1" href="https://rankedeuchre.com" target="_blank">rankedeuchre.com</a>
+            <a class="projectBtn" id="site2" href="https://flyweight.rustycloud.dev" target="_blank">flyweight.rustycloud.dev</a>
+            <a class="projectBtn" id="site3" href="https://golfbusinessnetwork.com" target="_blank">golfbusinessnetwork.com</a>
+        </div>
     </section>
 
     <section id="projectSection1">
-        <h2>Web Dev Portfolio</h2>
-        <p>This is a description of Project 1.</p>
-        <div id="project-1-image-container">
-            <a href="connorprp.github.io/client-side-demos/photoSite/"><img class="project-1-images" src="./assets/capture.PNG" alt="Capture the Light"></a>
-            <a href="connorprp.github.io/client-side-demos/landscape/"><img class="project-1-images" src="./assets/landscape.PNG" alt="Landscape Website"></a>
-        </div> 
+        <h2>RankedEuchre</h2>
+        <p>Free, browser-first ranked online euchre: no ads, no sign-up required to play. A monorepo with a pure
+            rules engine (unit tested), an Express 5 + Socket.IO backend for real-time multiplayer, and a Vue 3 frontend.
+            Live at <a id="links" href="https://rankedeuchre.com" target="_blank">rankedeuchre.com</a>.</p>
     </section>
-        <section id="projectSection2">
-            <h2>Project 1</h2>
-            <p>This is a description of Project 1.</p>
-        </section>
-        <section id="projectSection3">
-            <h2>Project 1</h2>
-            <p>This is a description of Project 1.</p>
-        </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a software developer with a passion for creating innovative solutions.</p>
-        </section>
+    <section id="projectSection2">
+        <h2>Flyweight Systems</h2>
+        <p>Full-stack MEVN app (MongoDB, Express, Vue 3, Node) deployed as a single service: Express serves the built
+            Vue SPA and the JWT-authenticated API. Self-hosted on my own server behind Coolify.
+            <a id="links" href="https://github.com/connorprp/flyweight-systems" target="_blank">Source</a></p>
+    </section>
+    <section id="projectSection3">
+        <h2>Tournament Payouts</h2>
+        <p>A Chrome extension that calculates cash payouts for golf tournaments, allocating each place's percentage to
+            the nearest even dollar and showing the remainder.
+            <a id="links" href="https://github.com/connorprp/tournament-payouts-extension" target="_blank">Source</a></p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a software engineer in Charlottesville, Virginia, and Head of Digital Development at Golf Business
+            Network, where I own the platform end to end: a suite of custom WordPress plugins (job board, events,
+            member directory, mobile API), a hosted platform of nine MCP servers that let the team work through
+            Claude, an Expo / React Native mobile app for iOS and Android, and a monitoring service that watches
+            all of it. Outside work I run a self-hosted home server and build tools for birding, golf, and games.</p>
+    </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p style="padding-left: 20px">Email: connorpoindexter12@gmail.com</p>
-            <p style="padding-left: 20px">Cell: 434-806-3435</p>
-            <p><a id="links" href="https://github.com/connorprp" target="_blank">Github</a></p>
-        </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p style="padding-left: 20px">Email: connorpoindexter12@gmail.com</p>
+        <p><a id="links" href="https://github.com/connorprp" target="_blank">GitHub</a> ·
+            <a id="links" href="https://linkedin.com/in/connor-poindexter-080456157" target="_blank">LinkedIn</a></p>
+    </section>
 
-        <section id="resume">
-            <h2>Resume</h2>
+    <section id="resume">
+        <h2>Resume</h2>
+        <p><a id="links" href="./ConnorPoindexterResume.pdf" target="_blank">Resume (PDF)</a></p>
+    </section>
 
-            <p><a id="links"
-                    href="https://drive.google.com/file/d/1u-9y-miJPskKlY_C1joOZ7FS3ISDDu77/view?usp=drive_link"
-                    target="_blank">Resume</a></p>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <p><a id="links" href="https://connorprp.github.io/client-side-demos/" target="_blank">Client-Side Demos</a>
-                - A
-                web
-                collection of
-                client-side demos showcasing my development journey.</p>
-            <p><a id="links" href="https://github.com/connorprp/Toggle_Desktop_Icons" target="_blank">Toggle Desktop
-                    Icons</a> -
-                A Github
-                repository showcasing an app that toggles desktop icons with a keyboard shortcut on Windows.</p>
-        </section>
-        <div id="footer">
-            <p>© 2023 Connor Poindexter</p>
-        </div>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p><a id="links" href="https://rankedeuchre.com" target="_blank">RankedEuchre</a> -
+            Ranked online euchre with real-time multiplayer. Node, Socket.IO, Vue 3.</p>
+        <p><a id="links" href="https://github.com/connorprp/flyweight-systems" target="_blank">Flyweight Systems</a> -
+            Single-service MEVN application with JWT auth, self-hosted.</p>
+        <p><a id="links" href="https://github.com/connorprp/tournament-payouts-extension" target="_blank">Tournament
+                Payouts</a> - Chrome extension for golf tournament payout math.</p>
+        <p><a id="links" href="https://github.com/connorprp/Toggle_Desktop_Icons" target="_blank">Toggle Desktop
+                Icons</a> - Windows keyboard shortcut to show or hide desktop icons.</p>
+    </section>
+    <div id="footer">
+        <p>© 2026 Connor Poindexter</p>
+    </div>
 </body>
 <script src="script.js"></script>
 
