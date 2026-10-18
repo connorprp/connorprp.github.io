@@ -1,108 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Connor Poindexter — software engineer and Head of Digital Development at Golf Business Network. WordPress plugins, MCP servers, mobile apps, and self-hosted infrastructure.">
-    <link rel="stylesheet" href="styles.css">
-    <title>Connor Poindexter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connor Poindexter, software engineer</title>
+  <meta name="description" content="Connor Poindexter is a software engineer in Charlottesville, Virginia and Head of Digital Development at Golf Business Network. Case studies, public code, résumé and contact.">
+  <link rel="canonical" href="https://connorprp.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://connorprp.github.io/">
+  <meta property="og:title" content="Connor Poindexter, software engineer">
+  <meta property="og:description" content="Head of Digital Development at Golf Business Network. Case studies of the platform work, public personal projects, résumé and contact.">
+  <meta name="theme-color" content="#101311">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101311'/%3E%3Cpath d='M8 9l8 7-8 7' fill='none' stroke='%237fcd8c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 24h7' stroke='%237fcd8c' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<nav id="navbar">
-    <a class="nav-link" href="#hero">Home</a>
-    <a class="nav-link" href="#about">About</a>
-    <a class="nav-link" href="#contact" id="contact-nav-link">Contact</a>
-    <a class="nav-link" href="#resume">Resume</a>
-    <a class="nav-link" href="#projects">Projects</a>
-</nav>
+  <header class="site-header">
+    <a class="brand" href="#top">connorprp</a>
+    <nav aria-label="Site">
+      <ul class="site-nav">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Résumé</a></li>
+        <li><button type="button" id="contact-toggle" aria-expanded="false" aria-controls="contact-bar">Contact</button></li>
+      </ul>
+    </nav>
+  </header>
 
-<div id="contact-bar">
-    <p id="contact">Email: connorpoindexter12@gmail.com</p>
-    <div id="socials">
-        <a href="https://github.com/connorprp/"><img id="github" src="./assets/github-mark.png" alt="GitHub Logo"></a>
-        <a href="https://linkedin.com/in/connor-poindexter-080456157"><img id="linkedin" src="./assets/linkedin.png"
-                alt="LinkedIn Logo"></a>
-    </div>
-</div>
+  <div id="contact-bar" class="contact-bar" hidden>
+    <p>Reach me at <a href="mailto:connorpoindexter12@gmail.com">connorpoindexter12@gmail.com</a>,
+      on <a href="https://github.com/connorprp">GitHub</a>,
+      or on <a href="https://linkedin.com/in/connor-poindexter-080456157">LinkedIn</a>.</p>
+  </div>
 
-<body>
-    <section id="hero">
-        <h1 id="myName"></h1>
-        <p id="description"></p>
-        <p id="skills"></p>
-        <p id="projects-label" style="display: none">Projects:</p>
-        <div id="projectsContainer" style="display: none">
-            <a class="projectBtn" id="project1" href="#projectSection1">GBN Platform</a>
-            <a class="projectBtn" id="project2" href="#projectSection2">Earshot</a>
-            <a class="projectBtn" id="project3" href="#projectSection3">Bird Targets</a>
-        </div>
-        <p id="sites" style="display: none">Live sites:</p>
-        <div id="sitesContainer" style="display: none">
-            <a class="projectBtn" id="site1" href="https://golfbusinessnetwork.com" target="_blank">golfbusinessnetwork.com</a>
-            <a class="projectBtn" id="site2" href="https://earshot.rustycloud.dev" target="_blank">earshot.rustycloud.dev</a>
-            <a class="projectBtn" id="site3" href="https://bird-targets.rustycloud.dev" target="_blank">bird-targets.rustycloud.dev</a>
-        </div>
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="name">
+      <h1 id="name" data-type="name">Connor Poindexter</h1>
+      <p class="hero-line" data-type="line">Software engineer in Charlottesville, Virginia. Head of Digital Development at <a href="https://golfbusinessnetwork.com">Golf Business Network</a>, where I am the engineering team: I design it, build it, ship it, and get paged when it breaks.</p>
+      <p class="hero-line hero-skills" data-type="line">JavaScript / TypeScript, Vue, Node, PHP / WordPress internals, Python, React Native, Docker.</p>
+      <nav class="hero-links" aria-label="Jump to">
+        <a href="#work">Case studies</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Résumé</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </section>
 
-    <section id="projectSection1">
-        <h2>GBN Platform</h2>
-        <p>At Golf Business Network I own the platform end to end: a suite of custom WordPress plugins (job
-            board, events, member directory, mobile API), a hosted platform of nine MCP servers that let the team
-            work through Claude, an Expo / React Native app for iOS and Android, and a monitoring service that
-            watches all of it. The code is private; the case studies on my
-            <a id="links" href="https://github.com/connorprp" target="_blank">GitHub profile</a> walk through
-            the design and the numbers.</p>
-    </section>
-    <section id="projectSection2">
-        <h2>Earshot</h2>
-        <p>An ambient conversation dashboard. A native capture agent listens to mic and system audio, runs
-            Whisper locally, and streams transcript lines to a Node hub, where the Claude Agent SDK distills the
-            conversation into live concept bubbles with suggested actions (calendar, email, spreadsheet, notes).
-            Multi-tenant with Google sign-in, Windows and Mac installers, self-updating agents.
-            <a id="links" href="https://github.com/connorprp/earshot" target="_blank">Source</a></p>
-    </section>
-    <section id="projectSection3">
-        <h2>Bird Targets</h2>
-        <p>Answers "which life birds are being seen near me right now, and where?" Pulls recent observations
-            from the eBird API, subtracts your life list, and maps the nearest sightings with checklist links and
-            directions. Vue 3 front end, Express back end, runs in Docker on my own server.
-            <a id="links" href="https://github.com/connorprp/bird-targets" target="_blank">Source</a></p>
-    </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a software engineer in Charlottesville, Virginia, and Head of Digital Development at Golf Business
-            Network, where I own the platform end to end: a suite of custom WordPress plugins (job board, events,
-            member directory, mobile API), a hosted platform of nine MCP servers that let the team work through
-            Claude, an Expo / React Native mobile app for iOS and Android, and a monitoring service that watches
-            all of it. Outside work I run a self-hosted home server and build tools for birding, golf, and games.</p>
+    <section id="work" aria-labelledby="work-heading">
+      <h2 id="work-heading">Work at Golf Business Network</h2>
+      <p>GBN is a membership network for private golf clubs. When I started, the platform was WordPress plus about a hundred third-party plugins, a Tableau subscription, a paid job board, and a CRM nobody fully trusted. Over 2026 I replaced the parts that mattered with things I own. The code is private; the write-ups below are public, with the architecture and the real numbers.</p>
+
+      <ul class="cards">
+        <li>
+          <article class="card">
+            <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/job-board.md">The job board</a></h3>
+            <p>Replaced WP Job Manager and five add-ons with an in-house careers hub, migrated the history without emailing anyone, and parsed résumés with Claude.</p>
+            <ul class="shape" aria-label="Shape of it">
+              <li>9 tables</li>
+              <li>226-assertion self-test</li>
+              <li>zero broken inbound links at go-live</li>
+            </ul>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/mcp-platform.md">An MCP platform for the whole company</a></h3>
+            <p>Nine MCP servers in one Python service so the team works through Claude against the CMS, CRM, database, events and wiki.</p>
+            <ul class="shape" aria-label="Shape of it">
+              <li>112 tools</li>
+              <li>OAuth bridge to WordPress</li>
+              <li>per-tool permissions, every call logged</li>
+            </ul>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/mobile-app.md">A native app with no second backend</a></h3>
+            <p>Expo app plus its WordPress API, contract-first, with types generated from the spec.</p>
+            <ul class="shape" aria-label="Shape of it">
+              <li>49-path OpenAPI contract</li>
+              <li>92-check API suite</li>
+              <li>iOS and Android from one codebase</li>
+            </ul>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/monitoring.md">Monitoring that doesn't trust the thing it watches</a></h3>
+            <p>Snapshot-and-diff change ledger, 109 checks, signed runbooks, then a fork for my own home network.</p>
+            <ul class="shape" aria-label="Shape of it">
+              <li>21 collectors</li>
+              <li>alert path never touches WordPress</li>
+            </ul>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/site-performance.md">Two outages and a 20x fix</a></h3>
+            <p>Email-day traffic was loading 109 plugins per webhook. Scoped it to 21 and the server recovered mid-outage.</p>
+            <ul class="shape" aria-label="Shape of it">
+              <li>388 MB to 14 MB per request</li>
+              <li>5.4 s to 0.26 s flow editor</li>
+            </ul>
+          </article>
+        </li>
+      </ul>
+
+      <p class="muted">Stack across all of it: PHP 7.4 to 8.2 and WordPress internals, Python (FastMCP, FastAPI, Starlette), TypeScript and React Native, Vue 3, MySQL and SQLite, Docker on Coolify, Render, Cloudflare, and the Claude Agent SDK and Messages API.</p>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p style="padding-left: 20px">Email: connorpoindexter12@gmail.com</p>
-        <p><a id="links" href="https://github.com/connorprp" target="_blank">GitHub</a> ·
-            <a id="links" href="https://linkedin.com/in/connor-poindexter-080456157" target="_blank">LinkedIn</a></p>
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects with public code</h2>
+      <ul class="cards">
+        <li>
+          <article class="card">
+            <h3><a href="https://github.com/connorprp/earshot">Earshot</a></h3>
+            <p>An ambient conversation dashboard. A native agent captures mic and system audio, runs Whisper locally on the GPU, and streams transcript lines to a Node hub. The Claude Agent SDK distills the conversation into live concept bubbles with hedged actions attached (calendar, email, spreadsheet, note). Multi-tenant, Google sign-in, Windows and Mac installers, agents that self-update from a tarball hash instead of a version number. The echo-suppression layer took longer than the rest of the capture pipeline combined.</p>
+            <ul class="shape" aria-label="Links">
+              <li><a href="https://github.com/connorprp/earshot">Source</a></li>
+              <li><a href="https://earshot.rustycloud.dev">earshot.rustycloud.dev</a></li>
+            </ul>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3><a href="https://github.com/connorprp/bird-targets">Bird Targets</a></h3>
+            <p>Answers "which life birds are being seen near me right now, and where?" Pulls recent observations from the eBird API, subtracts my life list, and maps the nearest sightings with checklist links and directions. Vue 3 and Express in Docker on my own server. Small on purpose. It does one thing I actually use.</p>
+            <ul class="shape" aria-label="Links">
+              <li><a href="https://github.com/connorprp/bird-targets">Source</a></li>
+              <li><a href="https://bird-targets.rustycloud.dev">bird-targets.rustycloud.dev</a></li>
+            </ul>
+          </article>
+        </li>
+      </ul>
     </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <p><a id="links" href="./ConnorPoindexterResume.pdf" target="_blank">Resume (PDF)</a></p>
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">How I work</h2>
+      <p>I build on Windows, ship iOS from a Mac mini over SSH, and run production services on a home Ubuntu box behind Coolify and Tailscale as well as on Render and Cloudways. I write the plan before the code and the changelog with it. I use Claude Code heavily and I've built a fair amount of tooling around it (MCP servers, skills, a Discord-driven agent that runs my ops). I think that's the honest way to describe how one person owns the list above.</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p><a id="links" href="https://github.com/connorprp" target="_blank">GBN Platform case studies</a> -
-            WordPress plugin suite, MCP server platform, mobile app, monitoring. Private code, public write-ups.</p>
-        <p><a id="links" href="https://github.com/connorprp/earshot" target="_blank">Earshot</a> -
-            Local Whisper capture plus Claude Agent SDK distillation into a live dashboard. Python, Node, Vue 3.</p>
-        <p><a id="links" href="https://github.com/connorprp/bird-targets" target="_blank">Bird Targets</a> -
-            Life-bird targets dashboard on the eBird API. Vue 3, Express, Docker.</p>
+    <section id="resume" aria-labelledby="resume-heading">
+      <h2 id="resume-heading">Résumé</h2>
+      <p><a href="./ConnorPoindexterResume.pdf">Connor Poindexter, résumé (PDF)</a></p>
     </section>
-    <div id="footer">
-        <p>© 2026 Connor Poindexter</p>
-    </div>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>If you want to talk about any of it:</p>
+      <ul class="contact-list">
+        <li><a href="mailto:connorpoindexter12@gmail.com">connorpoindexter12@gmail.com</a></li>
+        <li><a href="https://github.com/connorprp">github.com/connorprp</a></li>
+        <li><a href="https://linkedin.com/in/connor-poindexter-080456157">linkedin.com/in/connor-poindexter</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Connor Poindexter. Hand-coded, no framework, no tracker.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-
 </html>
