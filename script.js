@@ -10,11 +10,8 @@ const skills = document.getElementById("skills");
 const languages = document.getElementById("languages");
 const continueBtn3 = document.getElementById("continue3");
 const projectBtn = document.getElementsByClassName("projectBtn");
-const projects = document.getElementById("projects");
+const projects = document.getElementById("projects-label");
 const projectContainer = document.getElementById("projectsContainer");
-const projectBtn1 = document.getElementById("projectBtn1");
-const projectBtn2 = document.getElementById("projectBtn2");
-const projectBtn3 = document.getElementById("projectBtn3");
 const sites = document.getElementById("sites");
 const sitesContainer = document.getElementById("sitesContainer");
 
@@ -39,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 setTimeout(() => {
-    const descriptionMsg = `I'm a software engineer with a passion for creating innovative solutions. I love coding, problem-solving, and learning new technologies.`;
+    const descriptionMsg = `Software engineer. Head of Digital Development at Golf Business Network. I build WordPress plugins, MCP servers, mobile apps, and the infrastructure that runs them.`;
     for (let i = 0; i < descriptionMsg.length; i++) {
         setTimeout(() => {
             description.innerHTML += descriptionMsg[i];
@@ -49,7 +46,7 @@ setTimeout(() => {
 
 setTimeout(() => {
     skills.style.display = "inline-block";
-    const skillsMsg = "JavaScript - CSS - HTML - Java - C++ - Python";
+    const skillsMsg = "JavaScript / TypeScript - Vue - Node - PHP / WordPress - Python - React Native - Docker";
     for (let i = 0; i < skillsMsg.length; i++) {
         setTimeout(() => {
             skills.innerHTML += skillsMsg[i];
@@ -66,7 +63,3 @@ setTimeout(() => {
     sites.style.display = "block";
     sitesContainer.style.display = "block";
 }, 3500);
-
-projectBtn1.onclick = () => {
-    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-}

@@ -71,7 +71,7 @@
         font-size: 1.5rem;
     }
 
-    #description, #skills, #projects, #languages {
+    #description, #skills, #projects-label, #languages {
         margin-left: 0;
         font-size: 1rem;
     }
@@ -174,7 +174,7 @@ section {
     margin-left: 10%;
     font-size: 1.5rem;
 }
-#projects {
+#projects-label {
     margin-left: 10%;
     font-size: 1.5rem;
 }
