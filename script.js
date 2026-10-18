@@ -23,16 +23,21 @@ const caret = document.createElement("span");
 caret.className = "caret";
 caret.setAttribute("aria-hidden", "true");
 
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function srOnly(text) {
+  // Screen readers get the full sentence at once, not character by character.
+  const span = document.createElement("span");
+  span.className = "sr-only";
+  span.textContent = text;
+  return span;
+}
+
 function typeLine(el, text, msPerChar) {
   return new Promise((resolve) => {
-    // Screen readers get the full sentence at once; sighted users watch it
-    // appear character by character in an aria-hidden span.
-    const sr = document.createElement("span");
-    sr.className = "sr-only";
-    sr.textContent = text;
     const visible = document.createElement("span");
     visible.setAttribute("aria-hidden", "true");
-    el.replaceChildren(sr, visible, caret);
+    el.replaceChildren(srOnly(text), visible, caret);
 
     let i = 0;
     const tick = () => {
@@ -50,19 +55,37 @@ async function runIntro() {
   const originals = lines.map((el) => ({ el, html: el.innerHTML, text: el.textContent }));
   hero.classList.add("is-typing");
 
+  // Hide every line before first paint, wait for the font so we measure the
+  // real layout, then pin each line to its final height so the hero does not
+  // jump around as the text appears.
+  for (const { el } of originals) el.style.visibility = "hidden";
+  if (document.fonts) await document.fonts.ready;
+  for (const { el, text } of originals) {
+    el.style.minHeight = el.getBoundingClientRect().height + "px";
+    el.replaceChildren(srOnly(text));
+    el.style.visibility = "";
+  }
+
   for (const { el, text } of originals) {
     const speed = el.dataset.type === "name" ? SPEED.name : SPEED.line;
     await typeLine(el, text, speed);
-    await new Promise((r) => setTimeout(r, 250)); // small pause between lines
+    await wait(250); // small pause between lines
   }
 
-  for (const { el, html } of originals) el.innerHTML = html;
+  for (const { el, html } of originals) {
+    el.innerHTML = html;
+    el.style.minHeight = "";
+  }
   lines[lines.length - 1].append(caret); // leave the caret blinking on the last line
   hero.classList.remove("is-typing"); // fades the jump links in
 }
 
-if (hero && lines.length && !reduceMotion) {
-  runIntro();
+if (hero && lines.length) {
+  if (reduceMotion) {
+    lines[lines.length - 1].append(caret); // same end state, no animation
+  } else {
+    runIntro();
+  }
 }
 
 /* ---- 2. Contact bar toggle ------------------------------------------ */

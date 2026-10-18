@@ -12,6 +12,7 @@
   <meta property="og:description" content="Head of Digital Development at Golf Business Network. Case studies of the platform work, public personal projects, résumé and contact.">
   <meta name="theme-color" content="#101311">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101311'/%3E%3Cpath d='M8 9l8 7-8 7' fill='none' stroke='%237fcd8c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 24h7' stroke='%237fcd8c' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/Source_Code_Pro/SourceCodePro-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
@@ -58,7 +59,7 @@
           <article class="card">
             <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/job-board.md">The job board</a></h3>
             <p>Replaced WP Job Manager and five add-ons with an in-house careers hub, migrated the history without emailing anyone, and parsed résumés with Claude.</p>
-            <ul class="shape" aria-label="Shape of it">
+            <ul class="shape" aria-label="Key figures">
               <li>9 tables</li>
               <li>226-assertion self-test</li>
               <li>zero broken inbound links at go-live</li>
@@ -69,7 +70,7 @@
           <article class="card">
             <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/mcp-platform.md">An MCP platform for the whole company</a></h3>
             <p>Nine MCP servers in one Python service so the team works through Claude against the CMS, CRM, database, events and wiki.</p>
-            <ul class="shape" aria-label="Shape of it">
+            <ul class="shape" aria-label="Key figures">
               <li>112 tools</li>
               <li>OAuth bridge to WordPress</li>
               <li>per-tool permissions, every call logged</li>
@@ -80,7 +81,7 @@
           <article class="card">
             <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/mobile-app.md">A native app with no second backend</a></h3>
             <p>Expo app plus its WordPress API, contract-first, with types generated from the spec.</p>
-            <ul class="shape" aria-label="Shape of it">
+            <ul class="shape" aria-label="Key figures">
               <li>49-path OpenAPI contract</li>
               <li>92-check API suite</li>
               <li>iOS and Android from one codebase</li>
@@ -91,7 +92,7 @@
           <article class="card">
             <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/monitoring.md">Monitoring that doesn't trust the thing it watches</a></h3>
             <p>Snapshot-and-diff change ledger, 109 checks, signed runbooks, then a fork for my own home network.</p>
-            <ul class="shape" aria-label="Shape of it">
+            <ul class="shape" aria-label="Key figures">
               <li>21 collectors</li>
               <li>alert path never touches WordPress</li>
             </ul>
@@ -101,7 +102,7 @@
           <article class="card">
             <h3><a href="https://github.com/connorprp/connorprp/blob/main/case-studies/site-performance.md">Two outages and a 20x fix</a></h3>
             <p>Email-day traffic was loading 109 plugins per webhook. Scoped it to 21 and the server recovered mid-outage.</p>
-            <ul class="shape" aria-label="Shape of it">
+            <ul class="shape" aria-label="Key figures">
               <li>388 MB to 14 MB per request</li>
               <li>5.4 s to 0.26 s flow editor</li>
             </ul>
@@ -120,7 +121,7 @@
             <h3><a href="https://github.com/connorprp/earshot">Earshot</a></h3>
             <p>An ambient conversation dashboard. A native agent captures mic and system audio, runs Whisper locally on the GPU, and streams transcript lines to a Node hub. The Claude Agent SDK distills the conversation into live concept bubbles with hedged actions attached (calendar, email, spreadsheet, note). Multi-tenant, Google sign-in, Windows and Mac installers, agents that self-update from a tarball hash instead of a version number. The echo-suppression layer took longer than the rest of the capture pipeline combined.</p>
             <ul class="shape" aria-label="Links">
-              <li><a href="https://github.com/connorprp/earshot">Source</a></li>
+              <li><a href="https://github.com/connorprp/earshot">Source<span class="sr-only"> for Earshot</span></a></li>
               <li><a href="https://earshot.rustycloud.dev">earshot.rustycloud.dev</a></li>
             </ul>
           </article>
@@ -130,7 +131,7 @@
             <h3><a href="https://github.com/connorprp/bird-targets">Bird Targets</a></h3>
             <p>Answers "which life birds are being seen near me right now, and where?" Pulls recent observations from the eBird API, subtracts my life list, and maps the nearest sightings with checklist links and directions. Vue 3 and Express in Docker on my own server. Small on purpose. It does one thing I actually use.</p>
             <ul class="shape" aria-label="Links">
-              <li><a href="https://github.com/connorprp/bird-targets">Source</a></li>
+              <li><a href="https://github.com/connorprp/bird-targets">Source<span class="sr-only"> for Bird Targets</span></a></li>
               <li><a href="https://bird-targets.rustycloud.dev">bird-targets.rustycloud.dev</a></li>
             </ul>
           </article>
@@ -154,7 +155,7 @@
       <ul class="contact-list">
         <li><a href="mailto:connorpoindexter12@gmail.com">connorpoindexter12@gmail.com</a></li>
         <li><a href="https://github.com/connorprp">github.com/connorprp</a></li>
-        <li><a href="https://linkedin.com/in/connor-poindexter-080456157">linkedin.com/in/connor-poindexter</a></li>
+        <li><a href="https://linkedin.com/in/connor-poindexter-080456157">linkedin.com/in/connor-poindexter-080456157</a></li>
       </ul>
     </section>
   </main>
