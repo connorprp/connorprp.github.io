@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connor Poindexter, résumé</title>
+<meta name="description" content="Résumé of Connor Poindexter, software engineer and Head of Digital Development at Golf Business Network.">
+<meta name="robots" content="noindex">
+<style>
+  /* Print-first résumé. The PDF on the site is generated from this file with headless Chrome:
+     chrome --headless --print-to-pdf=ConnorPoindexterResume.pdf --no-pdf-header-footer resume.html */
+  @page { size: Letter; margin: 0.4in 0.5in; }
+  :root {
+    --ink: #1a1d1b; --muted: #5b625d; --rule: #c9cfc9; --accent: #2f7a44;
+    --body: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --mono: "Source Code Pro", Consolas, "Courier New", monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; color: var(--ink); font-family: var(--body); font-size: 9.3pt; line-height: 1.25; }
+  main { max-width: 7.5in; margin: 0 auto; padding: 0; }
+  @media screen { body { background: #e9ebe9; } main { background: #fff; padding: 0.6in; margin: 24px auto; box-shadow: 0 2px 14px rgba(0,0,0,.12); } }
+  a { color: var(--ink); text-decoration: none; }
+  header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-bottom: 2px solid var(--ink); padding-bottom: 5px; margin-bottom: 4px; }
+  h1 { font-size: 18pt; margin: 0; letter-spacing: .01em; font-weight: 700; }
+  .tagline { margin: 2px 0 0; color: var(--muted); font-size: 10pt; }
+  .contact { text-align: right; font-size: 9.4pt; line-height: 1.45; white-space: nowrap; }
+  .contact a { font-family: var(--mono); font-size: 8.9pt; }
+  h2 { font-size: 8.6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); margin: 8px 0 3px; padding-bottom: 2px; border-bottom: 1px solid var(--rule); }
+  .job { margin: 0 0 5px; break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .job-head strong { font-size: 10.8pt; }
+  .job-head .where { color: var(--muted); }
+  .job-head time { color: var(--muted); font-size: 9.4pt; white-space: nowrap; }
+  .role { margin: 0 0 2px; font-style: italic; color: var(--muted); font-size: 9.8pt; }
+  ul { margin: 2px 0 0; padding-left: 15px; }
+  li { margin: 0 0 1px; padding-left: 2px; }
+  li::marker { color: var(--muted); }
+  .proj { margin: 0 0 3px; break-inside: avoid; }
+  .proj strong { font-size: 10.4pt; }
+  .proj .links { font-family: var(--mono); font-size: 8.6pt; color: var(--muted); }
+  .proj p { margin: 1px 0 0; }
+  .skills { display: grid; grid-template-columns: max-content 1fr; column-gap: 14px; row-gap: 1px; margin: 0; }
+  .skills dt { font-weight: 600; color: var(--muted); font-size: 9.6pt; }
+  .skills dd { margin: 0; }
+  .edu { display: flex; justify-content: space-between; gap: 12px; margin: 0 0 3px; }
+  .edu span:last-child { color: var(--muted); font-size: 9.4pt; }
+  .num { font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>Connor Poindexter</h1>
+      <p class="tagline">Software engineer. WordPress internals, Python services, React Native, self-hosted infrastructure.</p>
+    </div>
+    <div class="contact">
+      Charlottesville, Virginia<br>
+      <a href="mailto:connorpoindexter12@gmail.com">connorpoindexter12@gmail.com</a><br>
+      <a href="https://connorpoindexter.com">connorpoindexter.com</a> ·
+      <a href="https://github.com/connorprp">github.com/connorprp</a><br>
+      <a href="https://linkedin.com/in/connor-poindexter-080456157">linkedin.com/in/connor-poindexter-080456157</a>
+    </div>
+  </header>
+
+  <h2>Experience</h2>
+
+  <section class="job">
+    <div class="job-head">
+      <div><strong>Golf Business Network</strong> <span class="where">(Argus Intelligence LLC), Charlottesville, VA</span></div>
+      <time>April 2025 – present</time>
+    </div>
+    <p class="role">Head of Digital Development. Joined as Software Development Intern; sole engineer for the platform.</p>
+    <ul>
+      <li>Own the member platform end to end: a suite of custom WordPress plugins (careers hub, events, member directory, club data API, charting that replaced Tableau, mobile API), a hosted MCP platform, an iOS/Android app, and the monitoring that watches all of it.</li>
+      <li>Replaced WP Job Manager and five paid add-ons with an in-house careers hub (PHP, 9 tables, 226-assertion headless self-test); migrated 229 postings with zero broken inbound links and no accidental CRM emails; added Claude-based résumé parsing.</li>
+      <li>Designed a Python MCP platform (FastMCP, Starlette) hosting 9 servers and 112 tools against the CMS, CRM, database, events and wiki: OAuth 2.1 bridge to WordPress Application Passwords so no credential is typed or stored, per-tool read/write permissions, every call audit-logged.</li>
+      <li>Shipped a native iOS/Android app (Expo, React Native, TypeScript) over a 49-path OpenAPI contract with generated client types, a 92-check API suite and APNs push sent directly from PHP; handled App Store review requirements in-app.</li>
+      <li>Built the monitoring service (FastAPI, 21 collectors, 109 checks, HMAC-signed runbooks): a snapshot-and-diff change ledger and an alert path that never depends on the site being monitored.</li>
+      <li>Diagnosed two broadcast-day outages and fixed the root cause with a request-scoping mu-plugin: per-request load fell from 109 plugins / 389 MB to 21 / 14 MB. Cut the CRM flow editor's render time from 5.4 s to 0.26 s with byte-identical output.</li>
+    </ul>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <div><strong>Dynetics, Inc.</strong> <span class="where">Threat Exploitation and Spectrum Warfare Division</span></div>
+      <time>May 2020 – August 2023</time>
+    </div>
+    <p class="role">Software Development Intern (summers)</p>
+    <ul>
+      <li>Modeled radar configurations and a monopole field in C++ and MATLAB on a 10-person Agile team; structured documentation with Perl and Doxygen; evaluated and tested custom software for government applications.</li>
+    </ul>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <div><strong>Virginia Tech Engineering IT</strong> <span class="where">Blacksburg, VA</span></div>
+      <time>August 2021 – January 2022</time>
+    </div>
+    <p class="role">IT Technician (Windows, macOS, Linux)</p>
+    <ul>
+      <li>Diagnosed hardware and OS-level problems for engineering students; built Windows deployment images; maintained VMs and a networked lab running SolidWorks, MATLAB and AutoCAD.</li>
+    </ul>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <div><strong>Farmington Country Club</strong> <span class="where">Charlottesville, VA</span></div>
+      <time>August 2023 – January 2024</time>
+    </div>
+    <p class="role">Outside Services Manager</p>
+    <ul>
+      <li>Ran daily outside operations for an award-winning course and mentored a high-school staff. Useful context for building software club staff actually use.</li>
+    </ul>
+  </section>
+
+  <h2>Selected projects</h2>
+
+  <div class="proj">
+    <strong>Earshot</strong> <span class="links">github.com/connorprp/earshot</span>
+    <p>Ambient conversation dashboard: a native capture agent (Python, local Whisper on GPU) streams transcripts to a Node hub where the Claude Agent SDK distills live concept bubbles with suggested actions. Multi-tenant, Windows and Mac installers, self-updating agents.</p>
+  </div>
+  <div class="proj">
+    <strong>Bird Targets</strong> <span class="links">github.com/connorprp/bird-targets</span>
+    <p>"Which life birds are being seen near me right now?" eBird API, Vue 3, Express, Docker on a self-hosted Coolify server.</p>
+  </div>
+  <div class="proj">
+    <strong>Eagle Analytics</strong> <span class="links">Bridgewater College</span>
+    <p>Led a small MEVN team building a sports-statistics dashboard: managed tasks and PRs, built Vue components, Express APIs and indexed MongoDB queries.</p>
+  </div>
+
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>TypeScript / JavaScript, PHP, Python, SQL, Java, C++</dd>
+    <dt>Web</dt><dd>WordPress internals and plugin architecture, Vue 3, React Native / Expo, Node / Express, OpenAPI</dd>
+    <dt>Services and data</dt><dd>FastAPI, FastMCP (Model Context Protocol), MySQL, SQLite, MongoDB, OAuth 2.1, HMAC-signed APIs</dd>
+    <dt>Infrastructure</dt><dd>Docker, Coolify, Render, Cloudflare, Cloudways, Tailscale, GitHub Actions, Linux administration</dd>
+    <dt>AI tooling</dt><dd>Claude Agent SDK and Messages API, MCP server design, Claude Code workflows, Whisper</dd>
+  </dl>
+
+  <h2>Education</h2>
+  <div class="edu"><span><strong>Bridgewater College</strong>, Bridgewater, VA. Computer Science</span><span></span></div>
+  <div class="edu"><span><strong>Virginia Tech</strong>, Blacksburg, VA. Computer Engineering coursework</span><span></span></div>
+</main>
+</body>
+</html>
